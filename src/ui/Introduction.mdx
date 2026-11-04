@@ -1,0 +1,14 @@
+import { Meta } from '@storybook/addon-docs/blocks'
+
+<Meta title="Introduction" />
+
+# justinohalloran.com design system
+
+The components behind [justinohalloran.com](https://justinohalloran.com), small on purpose.
+
+- **One source of truth for tokens.** `src/tokens.json` is compiled by `scripts/build-tokens.mjs` into CSS custom properties inside a Tailwind v4 `@theme` block. Tailwind utilities, plain CSS and these stories all read the same variables, so they cannot drift. Dark mode overrides the same variables; it costs no JavaScript.
+- **Framework-agnostic components.** Components that navigate take an `as` prop, so the site passes `next/link` and Storybook passes a plain anchor.
+- **Accessibility checked on every story** by the a11y addon (axe), set to fail on violations.
+- **Honest numbers are a type.** `Metric` requires a `status` of measured, estimate or unmeasured, and always renders it.
+
+Source: [github.com/Justinohallo/justinohalloran](https://github.com/Justinohallo/justinohalloran)

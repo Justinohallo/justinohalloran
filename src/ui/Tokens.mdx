@@ -1,0 +1,14 @@
+import { Meta, ColorPalette, ColorItem } from '@storybook/addon-docs/blocks'
+import tokens from '../tokens.json'
+
+<Meta title="Tokens" />
+
+# Tokens
+
+Generated from `src/tokens.json`. Left swatch is light, right is dark.
+
+<ColorPalette>
+  {Object.keys(tokens.color.light).map((k) => (
+    <ColorItem key={k} title={k} subtitle={`--color-${k}`} colors={{ light: tokens.color.light[k], dark: tokens.color.dark[k] }} />
+  ))}
+</ColorPalette>
