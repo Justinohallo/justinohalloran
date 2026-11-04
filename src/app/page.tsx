@@ -43,7 +43,7 @@ export default function Home() {
           </li>
           <li>
             <Link href="/work/this-site" className="font-medium text-ink">Performance →</Link>
-            <p className="mt-1 text-sm">Static rendering, almost no client JavaScript, and Lighthouse numbers published with a date.</p>
+            <p className="mt-1 text-sm">Fully static, no client components, and Lighthouse numbers published with their date and spread.</p>
           </li>
           <li>
             <a href="https://github.com/Justinohallo/justinohalloran" className="font-medium text-ink">Source →</a>

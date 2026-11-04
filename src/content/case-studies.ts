@@ -195,7 +195,7 @@ export const caseStudies: CaseStudy[] = [
     slug: 'this-site',
     title: 'Web performance, measured on this site',
     summary:
-      'Static by default, almost no client JavaScript, system fonts, and Lighthouse scores published from a real run rather than claimed.',
+      'Static by default, no client components, system fonts, and Lighthouse scores published from real runs, spread included, rather than claimed.',
     org: 'justinohalloran.com',
     role: 'Everything',
     when: '2026',
@@ -206,10 +206,10 @@ export const caseStudies: CaseStudy[] = [
       {
         heading: 'The approach',
         list: [
-          'Every page is statically generated at build time. There is no client-side data fetching and no hydration-heavy UI; React Server Components render the pages, and the only client script of note is Vercel Speed Insights for field data.',
+          'Every page is statically generated at build time. There is no client-side data fetching and none of my components run on the client; React Server Components render the pages. The JavaScript that does ship (about 145 KB compressed) is the Next.js and React runtime plus Vercel Speed Insights, and it is the main cost left in the mobile score.',
           'System font stacks, so no web-font request blocks first paint and nothing shifts when a font swaps in.',
           'Design tokens compile to CSS custom properties at build time, so theming (including dark mode) costs no JavaScript.',
-          'A Lighthouse run against production is recorded below with its date. Field data from real visitors comes from Speed Insights.',
+          'Lighthouse runs against production are recorded above with their date and spread. Field data from real visitors comes from Speed Insights.',
         ],
         body: [],
       },

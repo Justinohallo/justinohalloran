@@ -6,6 +6,7 @@ interface Recorded {
   url: string | null
   date: string | null
   formFactor: string | null
+  runs?: string
   scores: Record<string, number> | null
   audits: Record<string, string> | null
 }
@@ -28,8 +29,8 @@ export function LighthouseResults() {
     <div className="mt-8">
       <MetricGrid metrics={metrics} />
       <p className="mt-3 text-sm text-muted">
-        One lab run, {r.formFactor} profile, against {r.url} on {r.date}. Lab numbers vary from run to run; they are a
-        floor to hold, not a guarantee.
+        Lab data: {r.runs}, {r.formFactor}, against {r.url} on {r.date}. Lab scores swing from run to run, which is
+        why the spread is published with the median.
       </p>
     </div>
   )
