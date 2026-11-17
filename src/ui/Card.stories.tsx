@@ -8,7 +8,7 @@ const meta = {
     href: '#',
     eyebrow: "Arc'teryx · 2023 – 2024",
     title: 'Drupal to Sanity in six weeks',
-    description: 'A security finding put a deadline on a CMS migration the team had estimated at six more months.',
+    description: 'A penetration test put a hard date on a CMS migration the team had estimated would run to the end of 2024.',
     tags: ['cms', 'architecture', 'leadership'],
   },
   decorators: [(S) => <div className="max-w-sm"><S /></div>],
