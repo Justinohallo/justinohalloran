@@ -5,7 +5,7 @@ export const caseStudies: CaseStudy[] = [
     slug: 'sanity-migration',
     title: 'Drupal to Sanity in six weeks',
     summary:
-      'A security finding put a deadline on a CMS migration the team had estimated at six more months. I took the tech lead role and we shipped it in six weeks.',
+      'A penetration test put a hard date on a CMS migration the team had estimated would run to the end of 2024. I stepped up as tech lead of four developers and we shipped it in six weeks.',
     org: "Arc'teryx",
     role: 'Tech lead on the migration (a role, not a title)',
     when: '2023 – 2024',
@@ -13,7 +13,7 @@ export const caseStudies: CaseStudy[] = [
     stack: ['Sanity', 'Next.js', 'React', 'TypeScript', 'Fastly', 'Drupal (source)'],
     featured: true,
     metrics: [
-      { label: 'Delivery', value: '6 weeks', status: 'measured', note: 'Against a team estimate of six more months' },
+      { label: 'Delivery', value: '6 weeks', status: 'measured', note: 'Against a team estimate that ran to the end of 2024' },
       { label: 'Languages migrated', value: '8', status: 'measured' },
       { label: 'Business impact after launch', value: 'Unmeasured', status: 'unmeasured' },
     ],
@@ -21,19 +21,19 @@ export const caseStudies: CaseStudy[] = [
       {
         heading: 'The situation',
         body: [
-          "Arc'teryx's content pages ran on Drupal. A penetration test commissioned by the parent company flagged it, and the migration that had been drifting suddenly had a date. The team estimated six more months. The director gave us six weeks.",
-          'It was really two migrations at once: content from Drupal into Sanity, and the legacy Next.js "Landing Pages" app into a new Next.js "Content Pages" app, with Fastly gateway work in between, across eight languages and with an agency partner building alongside us.',
+          "Arc'teryx's content pages ran on Drupal. Going into 2024, management asked for a timeline and the team estimated the end of the year. Then a penetration test commissioned by the parent company set a hard date of April 15, and around February we had six weeks.",
+          'It was really two migrations at once: content from Drupal into Sanity, and the legacy Next.js "Landing Pages" app into a new Next.js "Content Pages" app, with Fastly gateway work in between, across eight languages.',
         ],
       },
       {
         heading: 'What I did',
         body: [
-          "I was already mentoring the team's back-end-leaning intermediate developer on React, so I asked for the tech lead role for the duration, and got it.",
+          "I was the only proficient React developer on the team and kept stepping up to bridge the gap, so I asked my manager for a leadership role, and got it.",
         ],
         list: [
-          'Dropped the agile ceremonies for six weeks. One shared deadline was doing all the coordinating a sprint board would have done, and we needed the hours.',
-          'Ran a full in-office week of schema mapping before anyone wrote migration code. Every Drupal content type got a Sanity destination, or an explicit decision not to have one.',
-          'Then six weeks heads-down. Content moved partly by hand and partly through an AI-assisted translation layer.',
+          'Cut every agile ceremony for the six weeks. One shared deadline was doing all the coordinating a sprint board would have done, and we needed the hours.',
+          'Ran an in-person sprint the first week to identify everything left to move.',
+          'Then the team, four developers working under me, finished by the deadline. Content moved partly by hand and partly through an AI-assisted translation layer.',
         ],
       },
       {
@@ -41,23 +41,23 @@ export const caseStudies: CaseStudy[] = [
         body: [
           'Shipping on the deadline meant shipping with Drupal\'s structures intact. I made the case for structured content instead of page-builder blobs: content modelled as data that other teams and channels can reuse. I split the team into a design-system stream and a content stream, and ran reimagining workshops on content that was trapped, such as a sizing guide that lived inside the page builder where no other team could reach it.',
           'The structured content strategy I defined was adopted by the global content team. Because the team turned over heavily, I also built the documentation layer: glossaries, executive summaries, architecture diagrams, videos and in-person training so analysts and product managers could work with the new system (what Landing versus Content Pages meant, how Fastly caching behaved, how publishing worked).',
-          "The migration earned a 2025 nomination for Arc'teryx's company-wide Creative Disruption award.",
+          "The migration earned a nomination for Arc'teryx's company-wide Creative Disruption award for 2024.",
         ],
       },
     ],
     hindsight:
-      'My request to refactor away the inherited Drupal structures after launch was turned down, so the platform carried them forward. I would push back on the page-builder direction from day one rather than after launch, while it was still cheap to change.',
+      'To make the date, the editor experience in Sanity was the deliberate cut: content was copied over 1:1 on Drupal\'s principles. My request to go back and refactor after launch was turned down, so the platform carried those structures forward. I would push back on the page-builder direction from day one, while it was still cheap to change.',
   },
   {
     slug: 'component-library',
     title: 'A component library and Storybook, from scratch',
     summary:
-      'The legacy design system had rotted past upgrading. I architected its replacement: a React component library with Storybook as the workbench and an alpha/beta/prod release pipeline.',
+      'The legacy component library was owned by no team and could not be upgraded. I set up its replacement from scratch: a shared React library with Storybook, published to NPM with alpha/beta/prod release channels.',
     org: "Arc'teryx",
-    role: 'Architect of the new library',
+    role: 'Set up the new library',
     when: '2023',
     tags: ['design-system', 'architecture'],
-    stack: ['React', 'TypeScript', 'Styled Components', 'Storybook', 'Rollup', 'NPM'],
+    stack: ['React', 'TypeScript', 'Styled Components', 'Storybook', 'Rollup', 'Vite', 'NPM'],
     featured: true,
     metrics: [
       { label: 'Release channels', value: 'alpha / beta / prod', status: 'measured' },
@@ -67,23 +67,23 @@ export const caseStudies: CaseStudy[] = [
       {
         heading: 'The situation',
         body: [
-          'The existing design system could no longer be maintained. Its Node and TypeScript versions had fallen far behind, and several attempts to upgrade it had failed.',
+          'The existing component library was used across the digital ecosystem but owned by no team. Its Node and TypeScript versions had fallen far behind, several attempts to upgrade it had failed, and the refactor it needed was off the table.',
         ],
       },
       {
-        heading: 'What I built',
+        heading: 'What we built',
         list: [
-          'A new React component library organised by atomic design, so primitives, composites and page sections each had a clear home and a clear owner.',
-          'Storybook as the workbench and the documentation site: every component developed and reviewed in isolation, with its states visible to designers and product people, not only engineers.',
-          'Rollup builds published to NPM through an alpha, beta and production release pipeline, so consuming apps could try a change before it became everyone\'s change.',
-          'Alongside it, I led the new Next.js homepage architecture and the React component layer for the Content Pages app.',
+          'I set up the package, Storybook and the component-layer architecture, released the first component and published it to NPM for the teams to use. The library used Styled Components and atomic design, the direction the agency had set.',
+          'Storybook as the workbench and for visual regression, with React Testing Library on components. We built components to be accessible and used axe to find issues; it was never audited.',
+          'Built with Rollup at first, later Vite, and published with alpha, beta and production release channels, so consuming apps could try a change before it became everyone\'s change.',
+          'Alongside it, I designed how the new Next.js homepage worked with Sanity, and owned its performance work: payload reduction, responsive images with lazy loading, and Sanity-to-Fastly cache invalidation for three storefront homepages.',
         ],
         body: [],
       },
       {
         heading: 'The people side',
         body: [
-          'After the CMS migration I split the team into a design-system stream and a content stream so the library had owners rather than visitors. I also mentored two co-op engineers through the work; one was hired full-time after the term.',
+          'During the CMS migration the team moved components into the library. Afterwards I split the team into a design-system stream and a content stream, and the team set up a governance structure that owned the library and approved every change. I also mentored two co-op engineers; one was hired full-time after finishing his degree.',
         ],
       },
       {
@@ -101,48 +101,41 @@ export const caseStudies: CaseStudy[] = [
     slug: 'fifo-engine',
     title: 'A FIFO cost-basis engine for a Bitcoin ATM operator',
     summary:
-      'Monthly exports from ATMs, an exchange and a hot wallet in; FIFO cost basis, gains and an accountant-ready workbook out, validated to the cent across 284 disposals.',
+      'Exchange, ATM and on-chain wallet exports in; one FIFO cost-basis and custody report out, with custody reconciled to the satoshi. The client\'s accountant accepted its workbook for the 2025 filing.',
     org: 'Burrard Works (client: a Bitcoin ATM operator)',
     role: 'Founder and engineer',
-    when: 'Feb 2026 – present',
+    when: 'Feb 2026 – present (maintenance)',
     tags: ['fintech', 'architecture', 'testing'],
     stack: ['Next.js', 'TypeScript', 'Excel generation', 'Claude Code'],
     featured: true,
     metrics: [
-      { label: 'Validation', value: 'To the cent, 284 disposals', status: 'measured', note: "Against the client's reference baseline" },
-      { label: 'In production', value: 'Q1 2026 reporting delivered', status: 'measured', note: 'Still operated and iterated' },
+      { label: 'Custody', value: 'Ties to the satoshi', status: 'measured', note: 'Against BitGo, the hot-wallet custodian' },
+      { label: 'Accepted', value: '2025 filing', status: 'measured', note: "The client's accountant accepted the workbook" },
+      { label: 'Reconciliation', value: 'CI gate', status: 'measured', note: "Fails any build whose output doesn't tie to the source files" },
     ],
     sections: [
       {
         heading: 'The problem',
         body: [
-          'The client runs a network of Bitcoin ATMs and an exchange. Each month their accountant needs cost basis and realised gains for business-income reporting to the CRA, and the raw material is three sets of exports (ATM, exchange and hot wallet) that were never designed to agree with each other.',
+          'The client runs a network of Bitcoin ATMs and an exchange. Their accountant needs a FIFO cost-basis report, and the raw material is three exports that were never designed to agree with each other: exchange buys, ATM dispenses, and on-chain custody in a BitGo hot wallet.',
         ],
       },
       {
         heading: 'What I built',
         list: [
-          'An ingestion layer that normalises the three exports into one ledger of acquisitions and disposals.',
-          'A FIFO engine that matches each disposal against open lots in order and computes cost basis and gain per lot.',
-          'Output the accountant can use without me: a summary plus a multi-tab, reconciled Excel workbook.',
+          'One FIFO queue across all three sources, with the hot wallet as the source of truth, a call I worked out together with the agent.',
+          'One cost-basis and custody report, on screen, as an Excel workbook and as a PDF, that the client runs himself.',
+          'A CI reconciliation gate that fails the build when the output does not tie to the source files.',
         ],
         body: [],
       },
       {
-        heading: 'The rewrite',
-        body: [
-          'Months two and three broke on data states the model had no mapping for, and the cause turned out to be structural: the hot wallet, not the exchange, was the tier-1 dataset. I rewrote the engine around it. After the rewrite the output matched the client\'s own reference baseline to the cent across all 284 disposals.',
-        ],
-      },
-      {
         heading: 'How it was built',
         body: [
-          'I wrote the specification first (architecture, data spec, and validation criteria) and built from it with Claude Code, prompt-driven, without writing code by hand. The spec is what made that safe: the validation baseline was defined before the engine existed, so "done" meant matching it, not looking plausible.',
+          'Spec-first: the first build commit already had the agents, architecture, data spec, validation and task documents, and builder, QA and UX-review agents. The spec was generated from the client\'s messages and his ChatGPT conversation. I built from it with Claude Code, prompt-driven, without writing code by hand.',
         ],
       },
     ],
-    hindsight:
-      'I skipped mapping how the business actually runs before writing code, and paid for it in the rewrite. Now that map comes first, before any code.',
   },
   {
     slug: 'wealthee',
@@ -178,13 +171,13 @@ export const caseStudies: CaseStudy[] = [
       {
         heading: 'Re-architecting around a price change',
         body: [
-          'The market-data provider raised its price from $500 to $5,000 a year. Rather than pay it, I replaced the custom trading backend with SnapTrade, which turned the product into broker-connected execution through Wealthsimple, Questrade and others.',
+          'The market-data provider raised its price from $500 to $5,000 a year. Rather than pay it, I replaced the mock-trading backend with a SnapTrade brokerage integration, and connected a real Wealthsimple account to pull live account data into the app.',
         ],
       },
       {
         heading: 'The 2025 rebuild',
         body: [
-          'During a sabbatical I rebuilt the web dashboard and backend as a Turborepo monorepo with GitHub Actions CI/CD in about six weeks, working with an AI coding agent. That rebuild is public. It has no tests: I chose speed over coverage for it, and the test suite lives in the original repo.',
+          'During a sabbatical I rebuilt the web dashboard and backend as a Turborepo monorepo with GitHub Actions CI/CD in six weeks, AI-assisted in Cursor. That rebuild is public. It has no tests: I chose speed over coverage for it, and the test suite lives in the original repo.',
         ],
       },
     ],
@@ -216,7 +209,7 @@ export const caseStudies: CaseStudy[] = [
       {
         heading: 'Earlier performance work',
         body: [
-          "At JumpStartCSR I redesigned the company website on a custom Webpack 4 build and cut its file and image payloads by 60%. At Arc'teryx the content platform sat behind Fastly, and part of my job was the gateway and caching behaviour, and explaining it to the analysts and product managers who needed to know why a change was or was not live yet.",
+          "At JumpStartCSR I redesigned the company website on a custom Webpack 4 build. At Arc'teryx I owned homepage performance work: payload reduction, responsive images with lazy loading, and a Sanity webhook to Fastly so publishing flushed the cache for each storefront homepage. Part of the job was explaining that caching to the analysts and product managers who needed to know why a change was or was not live yet.",
         ],
       },
     ],
@@ -228,7 +221,7 @@ export const caseStudies: CaseStudy[] = [
     slug: 'onboarding-wizard',
     title: 'A React onboarding wizard inside a legacy Java platform',
     summary:
-      'I started the React codebase inside a late-2000s Spring Boot platform and shipped a multistep, save-and-resume onboarding flow. It shipped, and it moved no numbers.',
+      'I set up the React codebase inside a late-2000s Spring Boot platform and led the front-end architecture for a multistep, save-and-resume onboarding flow. It shipped, and it moved no numbers.',
     org: 'alluraDirect',
     role: 'React developer, with team-lead duties',
     when: '2019 – 2022',
@@ -242,28 +235,28 @@ export const caseStudies: CaseStudy[] = [
       {
         heading: 'The situation',
         body: [
-          "alluraDirect is a vacation-rental platform for property managers at BC ski resorts, built on a Java/Spring Boot platform from the late 2000s. Every new property manager was onboarded by hand, by the CEO. The team when I arrived was the CEO, the CTO and a bookkeeper; I talked my way in with a month's trial and was hired at the end of it.",
+          "alluraDirect is a vacation-rental platform for property managers at BC ski resorts, built on a Java/Spring Boot platform from the late 2000s. New hosts were onboarded by hand, by the CEO, and he wanted to cut that setup friction. The team was four: me and a second bootcamp graduate under the CTO, plus a back-end developer.",
         ],
       },
       {
         heading: 'What I built',
         list: [
-          'Started the React app inside the legacy codebase and owned its architecture: state management, data fetching (I introduced React Query), and reusable hooks across the codebase.',
-          'Did the onboarding research and wireframes, designed how onboarding segments group together, and built the multistep save-and-resume wizard that replaced the manual process.',
+          'Set up the React app inside the legacy codebase and led the front-end architecture: React Router, Redux Toolkit, later React Query, and reusable hooks.',
+          'Did the onboarding research behind the wizard, grouping its segments and steps. The front-end team built the multistep save-and-resume wizard from the CEO\'s designs, against the CTO\'s API.',
           'Built the Owner Dashboard calendar and reservation tools in React, Redux Toolkit and TypeScript.',
-          'Set up CI running Cypress end-to-end and Jest integration tests through GitHub Actions.',
+          'Set up, with the team, CI running Cypress end-to-end and Jest integration tests on every feature pull request through GitHub Actions.',
         ],
         body: [],
       },
       {
         heading: 'Leading without the title',
         body: [
-          'I was never officially team lead, but I did the job for a frontend team of three: designed the interview process and hired two developers, ran sprint planning, retros and code review, ran Jira, and wrote the internal documentation the company aligned on.',
+          'I was never officially team lead, but I did the job for a frontend team of three: ran the front-end portion of developer interviews and sat on the hiring committee for two hires, ran sprint planning, retros and code review, ran Jira, and wrote the internal documentation the company aligned on.',
         ],
       },
     ],
     hindsight:
-      'It shipped and produced no new property-manager sign-ups that anyone could measure, because nobody, me included, set up the measurement. That is the project that made me build measurement in from the start.',
+      'It shipped, the CEO kept onboarding hosts by hand, and it produced no new property-manager sign-ups that anyone could measure, because nobody, me included, set up the measurement. That is the project that made me build measurement in from the start.',
   },
 ]
 

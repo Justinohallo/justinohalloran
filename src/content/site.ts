@@ -6,7 +6,7 @@ export const site = {
   title: 'Senior frontend engineer',
   location: 'Vancouver, BC',
   pitch:
-    'I build React and Next.js products, the design systems they are made of, and the content platforms behind them. Lately that means fintech and Bitcoin.',
+    'I build React and Next.js products, the design systems they are made of, and the content platforms behind them.',
   availability: 'Open to full-time roles and senior frontend contracts, in Vancouver or remote.',
   email: 'justinohallo@gmail.com',
   github: 'https://github.com/Justinohallo',
@@ -17,7 +17,7 @@ export const projects: Project[] = [
   {
     name: 'wealthee-monorepo',
     description:
-      'The 2025 rebuild of Wealthee: a Next.js advisor dashboard and Firebase Cloud Functions in one Turborepo, with broker connections through SnapTrade and secrets kept server-side.',
+      'The 2025 rebuild of Wealthee: a Next.js advisor dashboard and Firebase Cloud Functions in one Turborepo, with a SnapTrade brokerage integration and secrets kept server-side.',
     stack: ['Next.js', 'Firebase', 'SnapTrade', 'Turborepo'],
     repo: 'https://github.com/Justinohallo/wealthee-monorepo',
   },

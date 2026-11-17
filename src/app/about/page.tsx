@@ -8,11 +8,11 @@ export const metadata: Metadata = {
 
 const timeline = [
   { when: '2026 –', what: 'Founder and engineer, Burrard Works', note: 'Building software for clients, starting with a FIFO cost-basis engine for a Bitcoin ATM operator.' },
-  { when: '2025 –', what: 'Vancouver chapter lead, Bitcoin Builders', note: 'A community for people building Bitcoin products; events of 30 to 40 people.' },
+  { when: '2025 – 2026', what: 'Vancouver chapter lead, Bitcoin Builders', note: 'A community for people building Bitcoin products; two events of 30 to 40 people.' },
   { when: '2022 – 2025', what: "Intermediate front-end developer → senior software engineer, Arc'teryx", note: 'Component library and Storybook; tech lead on the Drupal to Sanity migration; promoted to senior in 2024.' },
   { when: '2020 – 2025', what: 'Co-founder and sole engineer, Wealthee', note: 'A portfolio platform for financial advisors: React, React Native, Firebase.' },
   { when: '2019 – 2022', what: 'React developer, alluraDirect', note: 'Started the React codebase inside a legacy Java platform; took on team-lead duties and hiring.' },
-  { when: '2018 – 2019', what: 'Web developer, JumpStartCSR, and freelance', note: 'A SaaS MVP with 3D foot modelling in Three.js; a site rebuild that cut payloads 60%.' },
+  { when: '2018 – 2019', what: 'Web developer, JumpStartCSR, and freelance', note: 'A SaaS MVP with 3D foot modelling in Three.js; a company website rebuilt on a custom Webpack build.' },
   { when: '2018', what: 'Web Development Diploma, BrainStation', note: '' },
   { when: '2014 – 2018', what: 'Event and tour operations, CSTT Sports Management and EduTravel', note: 'Ran 11 international sport tours and rebuilt the quoting system after inheriting a failed tour season.' },
 ]

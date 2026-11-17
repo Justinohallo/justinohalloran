@@ -4,7 +4,7 @@ import { Metric, MetricGrid } from './Metric'
 const meta = {
   title: 'Components/Metric',
   component: Metric,
-  args: { label: 'Validation', value: 'To the cent, 284 disposals', status: 'measured' },
+  args: { label: 'Custody', value: 'Ties to the satoshi', status: 'measured' },
   argTypes: { status: { control: 'inline-radio', options: ['measured', 'estimate', 'unmeasured'] } },
   parameters: {
     docs: {
@@ -31,7 +31,7 @@ export const Grid: Story = {
   render: () => (
     <MetricGrid
       metrics={[
-        { label: 'Delivery', value: '6 weeks', status: 'measured', note: 'Against a six-month estimate' },
+        { label: 'Delivery', value: '6 weeks', status: 'measured', note: 'Against a team estimate that ran to year-end' },
         { label: 'Languages', value: '8', status: 'measured' },
         { label: 'Business impact', value: 'Unmeasured', status: 'unmeasured' },
       ]}
